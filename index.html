@@ -16,27 +16,51 @@
             margin: 0;
             background-color: #55aaff;
             color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        a {
-            color: #fff;
-        }
-
-        .center {
+        .container {
             text-align: center;
+        }
+
+        .link {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #fff;
+            color: #55aaff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s, color 0.3s;
+            box-sizing: border-box;
+        }
+
+        .link:hover {
+            background-color: #55aaff;
+            color: #fff;
         }
     </style>
 </head>
 
 <body>
-<div class="center"><h1><a href="https://artmozai.blogspot.com">ArtMozai</a></h1>
-<script async src="https://cse.google.com/cse.js?cx=651d1b956c0ff4371">
-</script>
-<div class="gcse-searchbox-only"></div>
-</div>
-<div class="center"><a href="https://stock.adobe.com/uk/contributor/211463521/artmozai">Buy image</a></div>
-<div class="center"><a href="https://stock.artmozai.workers.dev">Gallery image</a></div>
-<div class="center"><a href="https://artmozai.myportfolio.com">Myportfolio</a></div>
+    <div class="container">
+        <h1>ArtMozai</h1>
+        <script async src="https://cse.google.com/cse.js?cx=651d1b956c0ff4371">
+        </script>
+        <div class="gcse-searchbox-only"></div>
+        <a href="https://artmozai.blogspot.com" class="link">Blog</a>
+        <a href="https://www.instagram.com/artmozai" class="link">Instagram</a>
+        <a href="https://x.com/artmozai" class="link">Twitter</a>
+        <a href="https://www.facebook.com/artmozai" class="link">Facebook</a>
+        <a href="https://stock.adobe.com/uk/contributor/211463521/artmozai" class="link">Buy image</a>
+        <a href="https://stock.artmozai.workers.dev" class="link">Gallery image</a>
+        <a href="https://artmozai.myportfolio.com" class="link">Myportfolio</a>
+    </div>
 </body>
 
 </html>
