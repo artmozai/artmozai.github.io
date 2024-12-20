@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://artmozai.blogspot.com/sitemap.xml
+Sitemap: https://artmozai.github.io/sitemap.xml
