@@ -63,37 +63,37 @@
   ],
   "screenshots": [
     {
-      "src": "https://artmozai-cdn.pages.dev/screenshots/screen-narrow-1.png",
+      "src": "https://artmozai-cdn.pages.dev/screenshots/screenshot-narrow-1.png",
       "type": "image/png",
       "sizes": "540x720",
       "form_factor": "narrow"
     },
     {
-      "src": "https://artmozai-cdn.pages.dev/screenshots/screen-narrow-2.png",
+      "src": "https://artmozai-cdn.pages.dev/screenshots/screenshot-narrow-2.png",
       "type": "image/png",
       "sizes": "540x720",
       "form_factor": "narrow"
     },
     {
-      "src": "https://artmozai-cdn.pages.dev/screenshots/screen-narrow-3.png",
+      "src": "https://artmozai-cdn.pages.dev/screenshots/screenshot-narrow-3.png",
       "type": "image/png",
       "sizes": "540x720",
       "form_factor": "narrow"
     },
     {
-      "src": "https://artmozai-cdn.pages.dev/screenshots/screen-wide-1.png",
+      "src": "https://artmozai-cdn.pages.dev/screenshots/screenshot-wide-1.png",
       "type": "image/png",
       "sizes": "720x540",
       "form_factor": "wide"
     },
     {
-      "src": "https://artmozai-cdn.pages.dev/screenshots/screen-wide-2.png",
+      "src": "https://artmozai-cdn.pages.dev/screenshots/screenshot-wide-2.png",
       "type": "image/png",
       "sizes": "720x540",
       "form_factor": "wide"
     },
     {
-      "src": "https://artmozai-cdn.pages.dev/screenshots/screen-wide-3.png",
+      "src": "https://artmozai-cdn.pages.dev/screenshots/screenshot-wide-3.png",
       "type": "image/png",
       "sizes": "720x540",
       "form_factor": "wide"
