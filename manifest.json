@@ -7,18 +7,13 @@
   "dir": "auto",
   "lang": "en-US",
   "orientation": "any",
-  "start_url": "https://artmoazai.blogspot.com/?utm_source=homescreen",
-  "scope": "https://artmoazai.blogspot.com/",
+  "start_url": "https://artmozai.blogspot.com/?utm_source=homescreen",
+  "scope": "https://artmozai.blogspot.com/",
   "display": "standalone",
   "prefer_related_applications": false,
   "background_color": "#fff",
   "theme_color": "#fff",
   "icons": [
-    {
-      "src": "https://artmozai-cdn.pages.dev/favicon.ico",
-      "sizes": "64x64",
-      "type": "image/x-icon"
-    },
     {
       "src": "https://artmozai-cdn.pages.dev/favicon-16x16.png",
       "sizes": "16x16",
@@ -64,6 +59,70 @@
       "src": "https://artmozai-cdn.pages.dev/android-icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://artmozai-cdn.pages.dev/screenshots/screen-narrow-1.png",
+      "type": "image/png",
+      "sizes": "540x720",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "https://artmozai-cdn.pages.dev/screenshots/screen-narrow-2.png",
+      "type": "image/png",
+      "sizes": "540x720",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "https://artmozai-cdn.pages.dev/screenshots/screen-narrow-3.png",
+      "type": "image/png",
+      "sizes": "540x720",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "https://artmozai-cdn.pages.dev/screenshots/screen-wide-1.png",
+      "type": "image/png",
+      "sizes": "720x540",
+      "form_factor": "wide"
+    },
+    {
+      "src": "https://artmozai-cdn.pages.dev/screenshots/screen-wide-2.png",
+      "type": "image/png",
+      "sizes": "720x540",
+      "form_factor": "wide"
+    },
+    {
+      "src": "https://artmozai-cdn.pages.dev/screenshots/screen-wide-3.png",
+      "type": "image/png",
+      "sizes": "720x540",
+      "form_factor": "wide"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Shortcut 1",
+      "short_name": "Shortcut 1",
+      "description": "Shortcut 1 description goes here...",
+      "url": "https://artmozai.blogspot.com/?utm_source=homescreen-1",
+      "icons": [
+        {
+          "src": "https://artmozai-cdn.pages.dev/favicon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Shortcut 2",
+      "short_name": "Shortcut 2",
+      "description": "Shortcut 2 description goes here...",
+      "url": "https://artmozai.blogspot.com/?utm_source=homescreen-2",
+      "icons": [
+        {
+          "src": "https://artmozai-cdn.pages.dev/favicon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
     }
   ]
 }
