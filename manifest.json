@@ -1,51 +1,67 @@
 {
-  "name": "ArtMozai",
-  "short_name": "ArtMozai",
-  "theme_color": "#55aaff",
-  "start_url": "https://www.artmozai.com/",
-  "scope": "https://www.artmozai.com/?utm_source=launcher",
+  "name": "Artmozai",
+  "id": "/",
+  "short_name": "Artmozai",
+  "description": "Art about AI",
+  "version": "1.0",
+  "dir": "auto",
+  "lang": "en-US",
+  "orientation": "any",
+  "start_url": "https://artmoazai.blogspot.com/?utm_source=homescreen",
+  "scope": "https://artmoazai.blogspot.com/",
   "display": "standalone",
   "prefer_related_applications": false,
-  "background_color": "#ffffff",
+  "background_color": "#fff",
+  "theme_color": "#fff",
   "icons": [
     {
-      "src": "https://cdn.artmozai.com/android-icon-36x36.png",
+      "src": "https://artmozai-cdn.pages.dev/favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "https://artmozai-cdn.pages.dev/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "https://artmozai-cdn.pages.dev/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "https://artmozai-cdn.pages.dev/android-icon-36x36.png",
       "sizes": "36x36",
-      "type": "image/png",
-      "density": "0.75"
+      "type": "image/png"
     },
     {
-      "src": "https://cdn.artmozai.com/android-icon-48x48.png",
+      "src": "https://artmozai-cdn.pages.dev/android-icon-48x48.png",
       "sizes": "48x48",
-      "type": "image/png",
-      "density": "1.0"
+      "type": "image/png"
     },
     {
-      "src": "https://cdn.artmozai.com/android-icon-72x72.png",
+      "src": "https://artmozai-cdn.pages.dev/android-icon-72x72.png",
       "sizes": "72x72",
-      "type": "image/png",
-      "density": "1.5"
+      "type": "image/png"
     },
     {
-      "src": "https://cdn.artmozai.com/android-icon-96x96.png",
+      "src": "https://artmozai-cdn.pages.dev/android-icon-96x96.png",
       "sizes": "96x96",
-      "type": "image/png",
-      "density": "2.0"
+      "type": "image/png"
     },
     {
-      "src": "https://cdn.artmozai.com/android-icon-144x144.png",
+      "src": "https://artmozai-cdn.pages.dev/android-icon-144x144.png",
       "sizes": "144x144",
-      "type": "image/png",
-      "density": "3.0"
+      "type": "image/png"
     },
     {
-      "src": "https://cdn.artmozai.com/android-icon-192x192.png",
+      "src": "https://artmozai-cdn.pages.dev/android-icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "density": "4.0"
+      "purpose": "maskable"
     },
     {
-      "src": "https://cdn.artmozai.com/android-icon-512x512.png",
+      "src": "https://artmozai-cdn.pages.dev/android-icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
