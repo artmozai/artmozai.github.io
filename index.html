@@ -1,66 +1,428 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index,follow">
-    <meta name="google-site-verification" content="IW4QlxxDTUCNxzDSTfwOCoZvx5_4caxqizT3TO-_N1A" />
-    <meta name="google-site-verification" content="W8NbuU_tiN3smaCCprXbH6_N9ZJn0otp_2CEvaOayx0" />
-    <style type="text/css">
-        html,
-        body {
-            padding: 0;
+    <meta name="google-site-verification" content="IW4QlxxDTUCNxzDSTfwOCoZvx5_4caxqizT3TO-_N1A">
+    <meta name="google-site-verification" content="W8NbuU_tiN3smaCCprXbH6_N9ZJn0otp_2CEvaOayx0">
+    
+    <!-- SEO Meta Tags -->
+    <title>ArtMozai - Digital Artist & Stock Photography | Portfolio & Social Links</title>
+    <meta name="description" content="ArtMozai - Professional digital artist and stock photographer. Explore my portfolio, follow my social media, and discover high-quality stock images and creative content.">
+    <meta name="keywords" content="ArtMozai, digital artist, stock photography, portfolio, Instagram, creative content, Adobe Stock">
+    <meta name="author" content="ArtMozai">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="ArtMozai - Digital Artist & Stock Photography">
+    <meta property="og:description" content="Professional digital artist and stock photographer. Explore my portfolio and creative content.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://artmozai.github.io">
+    <meta property="og:image" content="https://artmozai.github.io/apple-icon.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ArtMozai - Digital Artist & Stock Photography">
+    <meta name="twitter:description" content="Professional digital artist and stock photographer. Explore my portfolio and creative content.">
+    <meta name="twitter:image" content="https://artmozai.github.io/apple-icon.png">
+    <meta name="twitter:creator" content="@artmozai">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://artmozai.github.io">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://artmozai.github.io/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="https://artmozai.github.io/apple-icon.png">
+    
+    <style>
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+            --accent-color: #f093fb;
+            --text-primary: #ffffff;
+            --text-secondary: #e2e8f0;
+            --bg-card: rgba(255, 255, 255, 0.1);
+            --bg-card-hover: rgba(255, 255, 255, 0.2);
+            --shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+            --shadow-hover: 0 12px 40px rgba(31, 38, 135, 0.5);
+            --border-radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        * {
             margin: 0;
-            background-color: #55aaff;
-            color: #fff;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .container {
-            text-align: center;
-        }
-
-        .link {
-            display: block;
-            width: 100%;
-            padding: 15px;
-            margin: 10px 0;
-            background-color: #fff;
-            color: #55aaff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 18px;
-            transition: background-color 0.3s, color 0.3s;
+            padding: 0;
             box-sizing: border-box;
         }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+        
+        .profile-section {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            box-shadow: var(--shadow);
+            font-size: 48px;
+            font-weight: 700;
+            color: white;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .profile-title {
+            font-size: clamp(2rem, 5vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, var(--text-primary), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .profile-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            font-weight: 400;
+        }
+        
+        .search-section {
+            margin-bottom: 32px;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
 
-        .link:hover {
-            background-color: #55aaff;
-            color: #fff;
+
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+        
+        .links-grid {
+            display: grid;
+            gap: 16px;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+        
+        .link-item {
+            display: flex;
+            align-items: center;
+            padding: 20px 24px;
+            background: var(--bg-card);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .link-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s;
+        }
+        
+        .link-item:hover::before {
+            left: 100%;
+        }
+        
+        .link-item:hover {
+            transform: translateY(-2px);
+            background: var(--bg-card-hover);
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .link-item:active {
+            transform: translateY(0);
+        }
+        
+        .link-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 16px;
+            opacity: 0.9;
+        }
+        
+        .link-text {
+            flex: 1;
+            text-align: left;
+        }
+        
+        .link-arrow {
+            opacity: 0.6;
+            transition: var(--transition);
+            margin-left: 8px;
+        }
+        
+        .link-item:hover .link-arrow {
+            opacity: 1;
+            transform: translateX(4px);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            animation: fadeIn 1s ease-out 0.6s both;
+        }
+        
+        .footer-text {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 16px;
+            }
+            
+            .container {
+                max-width: 100%;
+            }
+            
+            .profile-avatar {
+                width: 100px;
+                height: 100px;
+                font-size: 40px;
+            }
+            
+            .link-item {
+                padding: 18px 20px;
+                font-size: 1rem;
+            }
+
+        }
+        
+        @media (max-width: 480px) {
+            .profile-subtitle {
+                font-size: 1rem;
+            }
+            
+            .link-item {
+                padding: 16px 18px;
+                font-size: 0.95rem;
+            }
+            
+            .link-icon {
+                width: 20px;
+                height: 20px;
+                margin-right: 12px;
+            }
+
+        }
+        
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            :root {
+                --bg-card: rgba(255, 255, 255, 0.2);
+                --bg-card-hover: rgba(255, 255, 255, 0.3);
+            }
+        }
+        
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
         }
     </style>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "ArtMozai",
+        "jobTitle": "Digital Artist & Stock Photographer",
+        "description": "Professional digital artist and stock photographer creating high-quality creative content",
+        "url": "https://artmozai.com",
+        "sameAs": [
+            "https://www.instagram.com/artmozai",
+            "https://x.com/artmozai",
+            "https://www.facebook.com/artmozai",
+            "https://pinterest.com/artmozai/",
+            "https://github.com/artmozai",
+            "https://artmozai.myportfolio.com"
+        ],
+        "knowsAbout": ["Digital Art", "Stock Photography", "Creative Design", "Visual Content"]
+    }
+    </script>
 </head>
-
 <body>
-    <div class="container">
-        <h1>ArtMozai</h1>
-        <script async src="https://cse.google.com/cse.js?cx=651d1b956c0ff4371"></script>
-        <div class="gcse-search"></div>
-        <a href="https://artmozai.blogspot.com" class="link">Blog</a>
-        <a href="https://www.instagram.com/artmozai" class="link">Instagram</a>
-        <a href="https://x.com/artmozai" class="link">Twitter</a>
-        <a href="https://www.facebook.com/artmozai" class="link">Facebook</a>
-        <a href="https://pinterest.com/artmozai/" class="link">Pinterest</a>
-        <a href="https://github.com/artmozai" class="link">Github</a>
-        <a href="https://linktr.ee/artmozai" class="link">Linktree</a>
-        <a href="https://stock.adobe.com/uk/contributor/211463521/artmozai" class="link">Buy image</a>
-        <a href="https://stock.artmozai.workers.dev" class="link">Gallery image</a>
-        <a href="https://artmozai.myportfolio.com" class="link">Myportfolio</a>
-    </div>
+    <main class="container">
+        <header class="profile-section">
+            <div class="profile-avatar" role="img" aria-label="ArtMozai Avatar">
+                AM
+            </div>
+            <h1 class="profile-title">ArtMozai</h1>
+            <p class="profile-subtitle">Digital Artist & Stock Photographer</p>
+        </header>
+        
+        <section class="search-section" aria-label="Search">
+            <script async src="https://cse.google.com/cse.js?cx=651d1b956c0ff4371"></script>
+            <div class="gcse-searchbox" data-resultsUrl="/search-results.html" data-newWindow="false" data-queryParameterName="search"></div>
+            <div class="gcse-searchresults"></div>
+        </section>
+        
+        <nav class="links-grid" role="navigation" aria-label="Social and Portfolio Links">
+            <a href="https://stock.artmozai.workers.dev" class="link-item" rel="noopener" aria-label="Visit ArtMozai Stock Images">
+                <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                </svg>
+                <span class="link-text">Stock Images</span>
+                <span class="link-arrow">→</span>
+            </a>
+            
+            <a href="https://stock.adobe.com/uk/contributor/211463521/artmozai" class="link-item" rel="noopener" aria-label="Visit ArtMozai Adobe Stock Profile">
+                <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M13.966 22.624l-1.69-4.281H8.122l3.892-9.144 5.662 13.425zM8.884 1.376H0v21.248zm15.116 0h-8.884L24 22.624V1.376z"/>
+                </svg>
+                <span class="link-text">Adobe Stock</span>
+                <span class="link-arrow">→</span>
+            </a>
+            
+            <a href="https://artmozai.myportfolio.com" class="link-item" rel="noopener" aria-label="Visit ArtMozai Portfolio">
+                <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <span class="link-text">Portfolio</span>
+                <span class="link-arrow">→</span>
+            </a>
+            
+            <a href="https://www.instagram.com/artmozai" class="link-item" rel="noopener" aria-label="Follow ArtMozai on Instagram">
+                <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+                <span class="link-text">Instagram</span>
+                <span class="link-arrow">→</span>
+            </a>
+            
+            <a href="https://x.com/artmozai" class="link-item" rel="noopener" aria-label="Follow ArtMozai on X (Twitter)">
+                <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+                <span class="link-text">X (Twitter)</span>
+                <span class="link-arrow">→</span>
+            </a>
+            
+            <a href="https://www.facebook.com/artmozai" class="link-item" rel="noopener" aria-label="Like ArtMozai on Facebook">
+                <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+                <span class="link-text">Facebook</span>
+                <span class="link-arrow">→</span>
+            </a>
+            
+            <a href="https://pinterest.com/artmozai/" class="link-item" rel="noopener" aria-label="Follow ArtMozai on Pinterest">
+                <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.758-1.378l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.624 0 11.99-5.367 11.99-11.99C24.007 5.367 18.641.001 12.017.001z"/>
+                </svg>
+                <span class="link-text">Pinterest</span>
+                <span class="link-arrow">→</span>
+            </a>
+            
+            <a href="https://github.com/artmozai" class="link-item" rel="noopener" aria-label="Visit ArtMozai GitHub Profile">
+                <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                <span class="link-text">GitHub</span>
+                <span class="link-arrow">→</span>
+            </a>
+            
+            <a href="https://linktr.ee/artmozai" class="link-item" rel="noopener" aria-label="Visit ArtMozai Linktree">
+                <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M7.953 15.066c-.08.163-.08.324-.08.486.08.517.528.897 1.052.897.44 0 .852-.308.852-.816 0-.133-.04-.283-.12-.379l-1.704-1.864v2.676zm-.992-3.543c.64-.122 1.232-.323 1.792-.562.48-.203.96-.446 1.4-.731.44.285.92.528 1.4.731.56.239 1.152.44 1.792.562v7.357c0 .365-.122.69-.365.934-.203.244-.528.386-.853.386s-.65-.142-.853-.386c-.244-.244-.365-.569-.365-.934V18.88c-.16.04-.32.08-.48.12-.08.04-.16.04-.24.04-.08 0-.16 0-.24-.04-.16-.04-.32-.08-.48-.12v2.4c0 .365-.122.69-.365.934-.203.244-.528.386-.853.386s-.65-.142-.853-.386c-.244-.244-.365-.569-.365-.934v-7.357zm8.704-1.866c.44-.774.691-1.672.691-2.635C16.356 4.019 14.337 2 11.834 2S7.312 4.019 7.312 7.022c0 .963.251 1.861.691 2.635.081.162.203.283.365.365.122.08.284.122.446.122.122 0 .244-.04.365-.122.162-.082.284-.203.365-.365.44-.774.691-1.672.691-2.635 0-1.66-1.353-3.005-3.012-3.005S4.211 5.362 4.211 7.022c0 .963.251 1.861.691 2.635.081.162.203.283.365.365.122.08.284.122.446.122.122 0 .244-.04.365-.122.162-.082.284-.203.365-.365z"/>
+                </svg>
+                <span class="link-text">Linktree</span>
+                <span class="link-arrow">→</span>
+            </a>
+            
+            <a href="https://artmozai.blogspot.com" class="link-item" rel="noopener" aria-label="Read ArtMozai Blog">
+                <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M21.976 24H2.026C.9 24 0 23.1 0 21.976V2.026C0 .9.9 0 2.025 0H21.976C23.1 0 24 .9 24 2.025v19.95C24 23.1 23.1 24 21.976 24zM12 3.975H9c-2.775 0-5.025 2.25-5.025 5.025v6c0 2.774 2.25 5.025 5.025 5.025h6c2.774 0 5.025-2.25 5.025-5.025v-3c0-.525-.45-.975-.975-.975H12c-.525 0-.975-.45-.975-.975V3.975z"/>
+                </svg>
+                <span class="link-text">Blog</span>
+                <span class="link-arrow">→</span>
+            </a>
+        </nav>
+        
+        <footer class="footer">
+            <p class="footer-text">© 2025 ArtMozai. Creative content & digital art.</p>
+        </footer>
+    </main>
 </body>
-
 </html>
