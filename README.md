@@ -1,2 +1,2 @@
 # artmozai.github.io
-artmosai cdn
+artmozai bio link profile and stock porto 
