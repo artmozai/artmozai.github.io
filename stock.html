@@ -378,7 +378,7 @@
             spinner.style.display = 'block';
 
             try {
-                const response = await fetch(`https://st-apis.artmozai.qzz.io/creator?search_page=${currentPage}`);
+                const response = await fetch(`https://st-apis.artmozai.indevs.in/creator?search_page=${currentPage}`);
                 const data = await response.json();
                 
                 const items = data.files || [];
@@ -412,7 +412,7 @@
                 article.className = 'gallery-item';
 
                 const imageUrl = item.thumbnail_500_url || '';
-                const itemLink = `https://stock.artmozai.qzz.io/stock-id/${item.id}`;
+                const itemLink = `https://stock.artmozai.indevs.in/stock-id/${item.id}`;
 
                 article.innerHTML = `
                     <a href="${itemLink}" target="_blank" rel="noopener" aria-label="View ${item.title}" class="img-container">
